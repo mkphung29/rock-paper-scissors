@@ -1,8 +1,4 @@
-let playerSelection = prompt("Choose Your Weapon!");
-let computerSelection = getComputerChoice();
-
-
-function getComputerChoice{
+function getComputerChoice(){
     let choices = ["Rock", "Paper", "Scissors"];
     let random = choices[Math.floor(Math.random() * choices.length)];
     return random;
@@ -26,3 +22,8 @@ function playRound(playerSelection, computerSelection) {
     }
 
     }
+
+let computerSelection = getComputerChoice();
+let playerSelection = prompt ("Choose your weapon!");
+console.log(computerSelection);
+console.log(playRound(playerSelection, computerSelection));
