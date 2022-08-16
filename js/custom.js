@@ -7,23 +7,23 @@ function getComputerChoice(){
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection){
         return ("It's a draw");
-    }else if (playerSelection === "Rock") && (computerSelection === "Scissors"){
-        return ("You win! Rock beats scissors.");
-    }else if (playerSelection === "Rock") && (computerSelection === "Paper"){
-        return ("You lose! Paper beats rock.");
-    }else if (playerSelection === "Paper") && (computerSelection === "Rock"){
-        return ("You win! Paper beats rock.");
-    }else if (playerSelection === "Paper") && (computerSelection === "Scissors"){
-        return ("You lose! Scissors beats paper.");
-    }else if (playerSelection === "Scissors") && (computerSelection === "Paper"){
-        return ("You win! Scissors beats paper.");
-    }else if (playerSelection === "Scissors") && (computerSelection === "Rock"){
-        return ("You lose! Rock beats scissors.");
+    }else if ((playerSelection === "Rock") && (computerSelection === "Scissors")){
+        return ("You win! Rock beats scissors");
+    }else if ((playerSelection === "Rock") && (computerSelection === "Paper")){
+        return ("You lose! Paper beats rock");
+    }else if ((playerSelection === "Paper") && (computerSelection === "Rock")){
+        return ("You win! Paper beats rock");
+    }else if ((playerSelection === "Paper") && (computerSelection === "Scissors")){
+        return ("You lose! Scissors beats paper");
+    }else if ((playerSelection === "Scissors") && (computerSelection === "Paper")){
+        return ("You win! Scissors beats paper");
+    }else if ((playerSelection === "Scissors") && (computerSelection === "Rock")){
+        return ("You lose! Rock beats scissors");
     }
 
     }
 
 let computerSelection = getComputerChoice();
-let playerSelection = prompt ("Choose your weapon!");
+playerSelection = prompt ("Choose your weapon!");
 console.log(computerSelection);
 console.log(playRound(playerSelection, computerSelection));
