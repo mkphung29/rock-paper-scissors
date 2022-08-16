@@ -21,8 +21,9 @@ function playRound(playerSelection, computerSelection) {
         return ("You lose! Rock beats scissors");
         computerScore++;
     }
-
     }
+
+    //Fix playerScore++ / computerScore++ ???
 
 //Define player selection
 let playerSelection = prompt ("Choose your weapon!");
@@ -70,7 +71,10 @@ function game() {
             }
 }
 
+
+//Prompt 5 rounds:
 console.log(game());
 
+    //Fix the results below:
 console.log("Your final score is " +playerScore+ "wins and " +computerScore+ "losses");
 
