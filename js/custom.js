@@ -69,3 +69,8 @@ function game() {
                 return ("You lose the game!");            
             }
 }
+
+console.log(game());
+
+console.log("Your final score is " +playerScore+ "wins and " +computerScore+ "losses");
+
