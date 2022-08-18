@@ -41,8 +41,10 @@ function playRound(playerSelection, computerSelection) {
     }else if ((playerSelection.toUpperCase() === "SCISSORS") && (computerSelection.toUpperCase() === "ROCK")){
         return ("You lose! Rock beats scissors");
         computerScore++;
+    }else {
+        return "Not a valid input"
     }
-    }
+}
 
     //Fix playerScore++ / computerScore++ ???
 
