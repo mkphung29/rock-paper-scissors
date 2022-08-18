@@ -1,9 +1,3 @@
-//Define player selection
-let playerSelection = prompt ("Choose your weapon!");
-
-console.log ("You choose " + playerSelection);
-
-
 // Create random computer choice function
 function getComputerChoice(){
     let choices = ["Rock", "Paper", "Scissors"];
@@ -14,71 +8,67 @@ function getComputerChoice(){
 //Define computer selection
 let computerSelection = getComputerChoice();
 
-//Define scores
-let playerScore = 0;
-let computerScore = 0;
-
 
 //Create function for one round
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection){
-        return ("It's a draw");
+        console.log ("It's a draw");
+        return null;
     }else if ((playerSelection.toUpperCase() === "ROCK") && (computerSelection.toUpperCase() === "SCISSORS")){
-        return ("You win! Rock beats scissors");
-        playerScore++;
+        console.log ("You win! Rock beats scissors");
+        return true;
     }else if ((playerSelection.toUpperCase() === "ROCK") && (computerSelection.toUpperCase() === "PAPER")){
-        return ("You lose! Paper beats rock");
-        computerScore++;
+        console.log ("You lose! Paper beats rock");
+        return false;
     }else if ((playerSelection.toUpperCase() === "PAPER") && (computerSelection.toUpperCase() === "ROCK")){
-        return ("You win! Paper beats rock");
-        playerScore++;
+        console.log ("You win! Paper beats rock");
+        return true;
     }else if ((playerSelection.toUpperCase() === "PAPER") && (computerSelection.toUpperCase() === "SCISSORS")){
-        return ("You lose! Scissors beats paper");
-        computerScore++;
+        console.log ("You lose! Scissors beats paper");
+        return false;
     }else if ((playerSelection.toUpperCase() === "SCISSORS") && (computerSelection.toUpperCase() === "PAPER")){
-        return ("You win! Scissors beats paper");
-        playerScore++;
+        console.log ("You win! Scissors beats paper");
+        return true;
     }else if ((playerSelection.toUpperCase() === "SCISSORS") && (computerSelection.toUpperCase() === "ROCK")){
-        return ("You lose! Rock beats scissors");
-        computerScore++;
+        console.log ("You lose! Rock beats scissors");
+        return false;
+        
     }else {
-        return "Not a valid input"
+        console.log ("Not a valid input");
+        return null;
     }
 }
 
-    //Fix playerScore++ / computerScore++ ???
-
-
-
 //Loop
 function game() {
+    let playerSelection, computerSelection, result;
+    let playerScore = 0;
+    let computerScore = 0;
+    const choices = ["ROCK", "PAPER", "SCISSORS"]
     for (let i = 0; i <5; i++){
-        playerSelection = prompt ("Choose your weapon!");
-        console.log ("You choose " + playerSelection);
+        playerSelection = prompt();
 
-        function getComputerChoice(){
-            let choices = ["Rock", "Paper", "Scissors"];
-            let random = choices[Math.floor(Math.random() * choices.length)];
-            return random;
-        }
         computerSelection = getComputerChoice();
-        console.log ("The computer chooses " + computerSelection);
+       
 
-        console.log(playRound(playerSelection, computerSelection)); //undefined
-            }
-            if (playerScore > computerScore){
-                return ("You win the game!");
-            }else if (playerScore < computerScore){
-                return ("You lose the game!");            
-            }
+        console.log("User plays " +playerSelection+ ", Computer plays " +computerSelection);
+        result = (playRound(playerSelection, computerSelection));
+
+        if (result) {
+                playerScore += 1;
+            } else if (result === false) {
+                computerScore += 1;
+            } 
+            console.log("The score is " +playerScore+ " to " +computerScore); 
+        }
+
+        if (playerScore > computerScore) {
+            return "You win the game!"
+        } else if (computerScore > playerScore) {
+            return "Computer wins! You lose!"
+        }else{
+            return "No winner declared."
+        }
 }
 
-
-//Prompt 5 rounds:
-console.log(game());
-
-//console.log is undefined
-
-    //Fix the results below:
-console.log("Your final score is " +playerScore+ "wins and " +computerScore+ "losses");
-
+    console.log(game());
