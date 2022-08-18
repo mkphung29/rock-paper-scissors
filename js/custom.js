@@ -1,3 +1,21 @@
+//Define player selection
+let playerSelection = prompt ("Choose your weapon!");
+console.log ("You choose " + playerSelection);
+
+// Create random computer choice function
+function getComputerChoice(){
+    let choices = ["Rock", "Paper", "Scissors"];
+    let random = choices[Math.floor(Math.random() * choices.length)];
+    return random;
+}
+
+//Define computer selection
+let computerSelection = getComputerChoice();
+
+//Define scores
+let playerScore = 0;
+let computerScore = 0;
+
 //Create function for one round
 function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection){
@@ -25,24 +43,6 @@ function playRound(playerSelection, computerSelection) {
 
     //Fix playerScore++ / computerScore++ ???
 
-//Define player selection
-let playerSelection = prompt ("Choose your weapon!");
-console.log ("You choose" + playerSelection);
-
-// Create random computer choice function
-function getComputerChoice(){
-    let choices = ["Rock", "Paper", "Scissors"];
-    let random = choices[Math.floor(Math.random() * choices.length)];
-    return random;
-}
-
-//Define computer selection
-let computerSelection = getComputerChoice();
-
-//Define scores
-let playerScore = 0;
-let computerScore = 0;
-
 
 //Define playRound
 console.log(playRound(playerSelection, computerSelection));
@@ -52,7 +52,7 @@ console.log(playRound(playerSelection, computerSelection));
 function game() {
     for (let i = 0; i <5; i++){
         playerSelection = prompt ("Choose your weapon!");
-        console.log ("You choose" + playerSelection);
+        console.log ("You choose " + playerSelection);
 
         function getComputerChoice(){
             let choices = ["Rock", "Paper", "Scissors"];
