@@ -60,7 +60,7 @@ function game() {
             return random;
         }
         computerSelection = getComputerChoice();
-        console.log ("The computer chooses" + computerSelection);
+        console.log ("The computer chooses " + computerSelection);
 
         console.log (playRound(playerSelection, computerSelection));
             }
