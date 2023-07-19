@@ -45,30 +45,32 @@ function game() {
     let playerScore = 0;
     let computerScore = 0;
     const choices = ["ROCK", "PAPER", "SCISSORS"]
-    for (let i = 0; i <5; i++){
+
+    for (let i = 0; i < 5; i++){
         playerSelection = prompt();
 
         computerSelection = getComputerChoice();
-       
 
-        console.log("User plays " +playerSelection+ ", Computer plays " +computerSelection);
+        console.log("User plays " + playerSelection + ", Computer plays " + computerSelection);
         result = (playRound(playerSelection, computerSelection));
 
-        if (result) {
-                playerScore += 1;
-            } else if (result === false) {
-                computerScore += 1;
-            } 
-            console.log("The score is " +playerScore+ " to " +computerScore); 
+        if (result === true) {
+            playerScore += 1;
+        }else if (result === false) {
+            computerScore += 1;
         }
 
+        console.log("The score is " +playerScore+ " to " +computerScore);
+    } 
+
         if (playerScore > computerScore) {
-            return "You win the game!"
+            return "You win the game!";
         } else if (computerScore > playerScore) {
-            return "Computer wins! You lose!"
+            return "Computer wins! You lose!";
         }else{
-            return "No winner declared."
-        }
+            return "No winner declared.";
+         }
+
 }
 
 console.log(game());

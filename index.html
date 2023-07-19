@@ -7,9 +7,37 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body>
-    <h1>Let's Play Rock Paper Scissors!</h1>
-    
-    <script src="js/custom.js"></script>
-    
+    <header>
+        <h1 class="heading">
+            <h1>Pokemon Starter Battle</h1>
+        </h1>
+        <div id="rules">
+            <h4>Fire Beats Grass</h4>
+            <h4>Grass Beats Water</h4>
+            <h4>Water Beats Fire</h4>
+        </div>
+    </header>
+    <main class="main-content">
+        <div class="player-icons"></div>
+        <div class="player-pokemon">
+            <div id="player-card"></div>
+            <div id="player-ground"></div>
+        </div>
+        <div class="scoreboard">
+            <div class="score"></div>
+            <div class="captions"></div>
+        </div>
+        <div class="cpu-pokemon">
+            <div id="cpu-card"></div>
+            <div id="cpu-ground"></div>
+        </div>
+        <div class="cpu-icons"></div>
+    </main>
+    <div class="buttons">
+        <div id="fire-button"></div>
+        <div id="water-button"></div>
+        <div id="grass-button"></div>
+    </div>
 </body>
+<script src="js/custom.js"></script>
 </html>
