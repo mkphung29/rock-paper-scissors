@@ -1,9 +1,27 @@
 // Create random computer choice function
 function getComputerChoice(){
-    let choices = ["Rock", "Paper", "Scissors"];
+    let choices = ["Fire", "Water", "Grass"];
     let random = choices[Math.floor(Math.random() * choices.length)];
     return random;
 }
+
+let playerSelection;
+
+// Define player selections
+const fireBtn = document.querySelector('#fire-button');
+fireBtn.addEventListener('click', () => {
+    playerSelection = "Fire";
+});
+
+const waterBtn = document.querySelector('#water-button');
+waterBtn.addEventListener('click', () => {
+    playerSelection = "Water";
+});
+
+const grassBtn = document.querySelector('#grass-button');
+grassBtn.addEventListener('click', () => {
+    playerSelection = "Grass";
+});
 
 //Define computer selection
 let computerSelection = getComputerChoice();
@@ -14,23 +32,23 @@ function playRound(playerSelection, computerSelection) {
     if (playerSelection === computerSelection){
         console.log ("It's a draw");
         return null;
-    }else if ((playerSelection.toUpperCase() === "ROCK") && (computerSelection.toUpperCase() === "SCISSORS")){
-        console.log ("You win! Rock beats scissors");
+    }else if ((playerSelection.toUpperCase() === "FIRE") && (computerSelection.toUpperCase() === "GRASS")){
+        console.log ("You win! Fire beats Grass");
         return true;
-    }else if ((playerSelection.toUpperCase() === "ROCK") && (computerSelection.toUpperCase() === "PAPER")){
-        console.log ("You lose! Paper beats rock");
+    }else if ((playerSelection.toUpperCase() === "FIRE") && (computerSelection.toUpperCase() === "WATER")){
+        console.log ("You lose! Water beats Fire");
         return false;
-    }else if ((playerSelection.toUpperCase() === "PAPER") && (computerSelection.toUpperCase() === "ROCK")){
-        console.log ("You win! Paper beats rock");
+    }else if ((playerSelection.toUpperCase() === "WATER") && (computerSelection.toUpperCase() === "FIRE")){
+        console.log ("You win! Water beats Fire");
         return true;
-    }else if ((playerSelection.toUpperCase() === "PAPER") && (computerSelection.toUpperCase() === "SCISSORS")){
-        console.log ("You lose! Scissors beats paper");
+    }else if ((playerSelection.toUpperCase() === "WATER") && (computerSelection.toUpperCase() === "GRASS")){
+        console.log ("You lose! Grass beats Water");
         return false;
-    }else if ((playerSelection.toUpperCase() === "SCISSORS") && (computerSelection.toUpperCase() === "PAPER")){
-        console.log ("You win! Scissors beats paper");
+    }else if ((playerSelection.toUpperCase() === "GRASS") && (computerSelection.toUpperCase() === "WATER")){
+        console.log ("You win! Grass beats Water");
         return true;
-    }else if ((playerSelection.toUpperCase() === "SCISSORS") && (computerSelection.toUpperCase() === "ROCK")){
-        console.log ("You lose! Rock beats scissors");
+    }else if ((playerSelection.toUpperCase() === "GRASS") && (computerSelection.toUpperCase() === "FIRE")){
+        console.log ("You lose! Fire beats Grass");
         return false;
         
     }else {
@@ -44,32 +62,28 @@ function game() {
     let playerSelection, computerSelection, result;
     let playerScore = 0;
     let computerScore = 0;
-    const choices = ["ROCK", "PAPER", "SCISSORS"]
+    const choices = ["FIRE", "WATER", "GRASS"]
 
-    for (let i = 0; i < 5; i++){
-        playerSelection = prompt();
+    computerSelection = getComputerChoice();
 
-        computerSelection = getComputerChoice();
+    console.log("User plays " + playerSelection + ", Computer plays " + computerSelection);
+    result = (playRound(playerSelection, computerSelection));
 
-        console.log("User plays " + playerSelection + ", Computer plays " + computerSelection);
-        result = (playRound(playerSelection, computerSelection));
+    if (result === true) {
+        playerScore += 1;
+    }else if (result === false) {
+        computerScore += 1;
+    }
 
-        if (result === true) {
-            playerScore += 1;
-        }else if (result === false) {
-            computerScore += 1;
-        }
+    console.log("The score is " +playerScore+ " to " +computerScore);
 
-        console.log("The score is " +playerScore+ " to " +computerScore);
-    } 
-
-        if (playerScore > computerScore) {
-            return "You win the game!";
-        } else if (computerScore > playerScore) {
-            return "Computer wins! You lose!";
-        }else{
-            return "No winner declared.";
-         }
+    if (playerScore > computerScore) {
+        return "You win the game!";
+    } else if (computerScore > playerScore) {
+        return "Computer wins! You lose!";
+    }else{
+        return "No winner declared.";
+    }
 
 }
 
