@@ -58,3 +58,10 @@ footer{
     margin-top: 100px;
 }
 
+.credits{
+    font-size: 12pt;
+}
+
+a{
+    text-decoration: none;
+}
