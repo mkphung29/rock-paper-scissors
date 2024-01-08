@@ -162,20 +162,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
         // Update player card image
         if (playerSelection.toUpperCase() === "FIRE") {
-            playerCard.innerHTML = `<img src="../images/char-battle.png">`
+            playerCard.innerHTML = `<img src="images/char-battle.png">`
         } else if (playerSelection.toUpperCase() === "WATER") {
-            playerCard.innerHTML = `<img src="../images/squirt-battle.png">`
+            playerCard.innerHTML = `<img src="images/squirt-battle.png">`
         } else if (playerSelection.toUpperCase() === "GRASS") {
-            playerCard.innerHTML = `<img src="../images/bulb-battle.png">`
+            playerCard.innerHTML = `<img src="images/bulb-battle.png">`
         }
 
         // Update CPU card image
         if (computerSelection.toUpperCase() === "FIRE") {
-            cpuCard.innerHTML = `<img src="../images/tepig-battle.png">`
+            cpuCard.innerHTML = `<img src="images/tepig-battle.png">`
         } else if (computerSelection.toUpperCase() === "WATER") {
-            cpuCard.innerHTML = `<img src="../images/oshawatt-battle.png">`
+            cpuCard.innerHTML = `<img src="images/oshawatt-battle.png">`
         } else if (computerSelection.toUpperCase() === "GRASS") {
-            cpuCard.innerHTML = `<img src="../images/snivy-battle.png">`
+            cpuCard.innerHTML = `<img src="images/snivy-battle.png">`
         }
     }
 
