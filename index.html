@@ -31,21 +31,29 @@
             </div>
         </div>
         <div class="pokemon-choice">
-            <div id="player-card"></div>
+            <div id="player-card">
+                <img id="player-card-img" src="" alt="Pick Your Pokemon!"/>
+            </div>
             <div id="battle-ground">
                 <img src="images/battle-ground.png">
             </div>
         </div>
         <div class="scoreboard">
             <div class="score">
-                <h5>4 to 5</h5>
+                <h5 class="score-text player-scores user-score"></h5> 
+                <h5 class="score-text in-between"></h5>
+                <h5 class="score-text player-scores cpu-score"></h5>
             </div>
             <div class="captions">
-                <h5>Better luck next time</h5>
+                <h5 class="caption-text"></h5>
             </div>
         </div>
         <div class="pokemon-choice">
-            <div id="cpu-card"></div>
+            <div id="cpu-card">
+                <div id="player-card">
+                    <img id="cpu-card-img" src="" alt="What will your opponent choose?"/>
+                </div>
+            </div>
             <div id="battle-ground">
                 <img src="images/battle-ground.png">
             </div>
@@ -63,20 +71,23 @@
         </div>
     </main>
     <div class="buttons">
-        <div id="fire-button">
+        <div id="fire-button element-button">
             <img src="images/fire-icon.png">
         </div>
-        <div id="water-button">
+        <div id="water-button element-button">
             <img src="images/water-icon.png">
         </div>
-        <div id="grass-button">
+        <div id="grass-button element-button">
             <img src="images/grass-icon.png">
         </div>
     </div>
 </body>
 <footer>
     <div class="artist-credit">
-        <h5 class="credits">Big thanks to <a href="https://www.deviantart.com/sarahrichford/gallery">SarahRichford</a> for the icons!</h5>
+        <h5 class="credits">Big thanks to <a href="https://www.deviantart.com/sarahrichford/gallery">SarahRichford</a> for the icons and
+            <a href="https://www.deviantart.com/nemotrex/art/background-prairie-pokemon-screencapture-861064355">nemotrex</a> for the background!
+        </h5>
+        <h5 class="credits">Created by <a href="https://github.com/mkphung29">Madison Phung</a> </h5>
     </div>
 </footer>
 <script src="js/custom.js"></script>

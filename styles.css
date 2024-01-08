@@ -14,12 +14,17 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: url(images/footer-bg.png);
+    background: url(images/scenic-bg.png);
     font-family: 'Gluten', cursive;
 }
 
 h1{
     font-size: 36pt;
+    color: rgb(201,6,6);
+}
+
+h4{
+    color: white;
 }
 
 #rules{
@@ -42,27 +47,53 @@ img{
 
 .pokemon-choice{
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
 .scoreboard{
     display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
     align-items: flex-end;
     font-family: 'Gluten', cursive;
+}
+
+.score{
+    display: flex;
+    gap: 30px;
+}
+
+.score-text{
+    font-size: 24pt;
+}
+
+.captions{
+    font-size: 14pt;
 }
 
 .buttons{
     margin-bottom: -105px;
     display: flex;
     justify-content: space-around;
-    background: url(images/header-bg.png);
+    background: url(images/scenic-bg.png);
+    background-position: bottom;
 }
 
 footer{
-    background: url(images/header-bg.png);
+    background: url(images/footer-bg.png);
+    background-position: bottom;
     padding: 20px;
     margin-top: 100px;
     font-family: 'Gluten', cursive;
+}
+
+.artist-credit{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .credits{
