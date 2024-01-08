@@ -1,3 +1,3 @@
-# rock-paper-scissors
+# Rock Paper Scissors (Pokemon Edition)
 
-In this project, I will be applying my basic JavaScript knowledge to build a rock, paper, scissors game simulation!
+This is a simple iteration of a Rock, Paper, Scissors game to utilize my Javascript DOM manipulation skills. With the Pokemon starters from the Kanto region, Players ust pick the correct Pokemon against a CPU to win the Pokemon battle!
